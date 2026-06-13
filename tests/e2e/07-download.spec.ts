@@ -33,9 +33,10 @@ test.describe("Download Page", () => {
     await expect(page.getByText(/Tax Bands & Rates/).first()).toBeVisible();
   });
 
-  test("shows checkout buy button", async ({ page }) => {
-    const btn = page.getByRole("button", { name: /Buy now — £9.99/ });
+  test("shows checkout buy link", async ({ page }) => {
+    const btn = page.getByRole("link", { name: /Buy now — £9.99/ });
     await expect(btn).toBeVisible();
+    await expect(btn).toHaveAttribute("href", "https://buy.stripe.com/6oU14n6xseSqapCfp15kk00");
   });
 
   test("shows Stripe security note", async ({ page }) => {
