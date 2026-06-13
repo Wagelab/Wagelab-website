@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Decap CMS identity via Netlify Identity
+publish_mode: editorial_workflow
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Category", name: "category", widget: "select",
+          options: ["Income Tax", "Pensions", "Student Loans", "Salary Sacrifice", "Dividends", "National Insurance", "General"] }
+      - { label: "Read Time", name: "readTime", widget: "string", default: "8 min read" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
