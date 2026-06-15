@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
   { href: "/calculator", label: "Calculator" },
   { href: "/articles", label: "Articles" },
+  { href: "/affiliates", label: "Affiliates" },
   { href: "/download", label: "Download" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
@@ -25,44 +27,14 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div
-              style={{
-                width: 40,
-                height: 32,
-                background: "#1e3a5f",
-                border: "1px solid #2a4a6e",
-                borderRadius: 4,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: 18,
-                  fontWeight: 900,
-                  color: "#FF00FF",
-                  fontFamily: "var(--font-dm-sans), Arial, sans-serif",
-                  letterSpacing: "-0.05em",
-                }}
-              >
-                w
-              </span>
-            </div>
-            <span
-              style={{
-                fontSize: 20,
-                fontWeight: 700,
-                fontFamily: "var(--font-dm-sans), Arial, sans-serif",
-                letterSpacing: "-0.03em",
-                lineHeight: 1,
-              }}
-            >
-              <span style={{ color: "#FF00FF" }}>w</span>
-              <span style={{ color: "#ffffff" }}>age</span>
-              <span style={{ color: "#FF00FF" }}>lab</span>
-            </span>
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
+              src="/wagelab-logo.svg"
+              alt="WageLab"
+              width={160}
+              height={37}
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

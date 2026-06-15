@@ -43,11 +43,16 @@ html {
   outline-offset: 2px;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #F8FAFF; }
-::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+/* Custom scrollbar — magenta on desktop, hidden on mobile */
+@media (min-width: 769px) {
+  ::-webkit-scrollbar { width: 12px; }
+  ::-webkit-scrollbar-track { background: #F8FAFF; border-radius: 6px; }
+  ::-webkit-scrollbar-thumb { background: #FF00FF; border-radius: 6px; border: 2px solid #F8FAFF; }
+  ::-webkit-scrollbar-thumb:hover { background: #cc00cc; }
+}
+@media (max-width: 768px) {
+  ::-webkit-scrollbar { display: none; }
+}
 
 /* Calculator range input */
 input[type=range] {

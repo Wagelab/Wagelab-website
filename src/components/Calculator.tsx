@@ -441,12 +441,28 @@ export default function UKTaxApp() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500;700&display=swap');
         *{box-sizing:border-box}
-        ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#060e18}::-webkit-scrollbar-thumb{background:#2e4057;border-radius:2px}
         input[type=range]{-webkit-appearance:none;height:7px;border-radius:4px;background:#2a4a6e;outline:none}
         input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;cursor:pointer;background:#f472b6;border:3px solid #07101a;box-shadow:0 0 0 2px #f472b6,0 2px 10px rgba(244,114,182,.55)}
         input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;cursor:pointer;background:#f472b6;border:3px solid #07101a}
         input[type=range]::-moz-range-track{height:7px;border-radius:4px;background:#2a4a6e}
         select option{background:#0b1520}
+        .calc-grid{display:grid;grid-template-columns:320px 1fr;min-height:calc(100vh - 58px)}
+        .calc-left{border-right:1px solid #0f1e2d;padding:18px 16px;overflow-y:auto;background:#07101a}
+        .calc-right{padding:20px;overflow-y:auto}
+        .calc-tabs{display:flex;gap:4px;margin-bottom:18px;background:#0b1520;border-radius:10px;padding:4px;width:fit-content}
+        @media(min-width:769px){
+          .calc-left::-webkit-scrollbar,.calc-right::-webkit-scrollbar{width:12px}
+          .calc-left::-webkit-scrollbar-track,.calc-right::-webkit-scrollbar-track{background:#060e18;border-radius:6px}
+          .calc-left::-webkit-scrollbar-thumb,.calc-right::-webkit-scrollbar-thumb{background:#FF00FF;border-radius:6px;border:2px solid #060e18}
+          .calc-left::-webkit-scrollbar-thumb:hover,.calc-right::-webkit-scrollbar-thumb:hover{background:#cc00cc}
+        }
+        @media(max-width:768px){
+          .calc-grid{display:flex;flex-direction:column;min-height:unset}
+          .calc-left{border-right:none;border-bottom:1px solid #0f1e2d;padding:16px}
+          .calc-right{padding:16px}
+          .calc-tabs{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;width:100%}
+          .calc-left::-webkit-scrollbar,.calc-right::-webkit-scrollbar{display:none}
+        }
       `}</style>
 
       {/* Header */}
@@ -471,10 +487,10 @@ export default function UKTaxApp() {
         </div>
       </div>
 
-      <div style={{display:"grid",gridTemplateColumns:"320px 1fr",minHeight:"calc(100vh - 58px)"}}>
+      <div className="calc-grid">
 
         {/* LEFT — Inputs */}
-        <div style={{borderRight:"1px solid #0f1e2d",padding:"18px 16px",overflowY:"auto",background:"#07101a"}}>
+        <div className="calc-left">
 
           {/* Hero */}
           <div style={{background:"linear-gradient(135deg,#0a1f14,#071018)",border:"1px solid rgba(34,197,94,.2)",
@@ -715,10 +731,10 @@ export default function UKTaxApp() {
         </div>
 
         {/* RIGHT — Results */}
-        <div style={{padding:20,overflowY:"auto"}}>
+        <div className="calc-right">
 
           {/* Tabs */}
-          <div style={{display:"flex",gap:4,marginBottom:18,background:"#0b1520",borderRadius:10,padding:4,width:"fit-content"}}>
+          <div className="calc-tabs">
             {["summary","breakdown","allowances","employer","payslip"].map(tb=>(
               <button key={tb} onClick={()=>setTab(tb)} style={{
                 padding:"7px 16px",borderRadius:7,border:"none",cursor:"pointer",

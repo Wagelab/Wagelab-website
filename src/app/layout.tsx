@@ -19,6 +19,11 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.wagelab.co.uk"),
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   title: {
     default: "WageLab – UK Take-Home Pay Calculator 2026/27",
     template: "%s – WageLab",

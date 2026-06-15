@@ -83,19 +83,24 @@ test.describe("Homepage", () => {
   });
 
   test("cookie banner appears on first visit", async ({ page }) => {
-    // Clear localStorage to simulate first visit
-    await page.evaluate(() => localStorage.removeItem("wagelab-cookie-consent"));
+    await page.evaluate(() => {
+      localStorage.removeItem("wagelab-consent-analytics");
+      localStorage.removeItem("wagelab-consent-advertising");
+    });
     await page.reload();
     const banner = page.getByRole("dialog", { name: /cookie/i });
     await expect(banner).toBeVisible();
-    await expect(banner.getByRole("button", { name: "Accept" })).toBeVisible();
-    await expect(banner.getByRole("button", { name: "Decline" })).toBeVisible();
+    await expect(banner.getByRole("button", { name: "Accept all" })).toBeVisible();
+    await expect(banner.getByRole("button", { name: "Decline all" })).toBeVisible();
   });
 
-  test("cookie banner disappears after accepting", async ({ page }) => {
-    await page.evaluate(() => localStorage.removeItem("wagelab-cookie-consent"));
+  test("cookie banner disappears after accepting all", async ({ page }) => {
+    await page.evaluate(() => {
+      localStorage.removeItem("wagelab-consent-analytics");
+      localStorage.removeItem("wagelab-consent-advertising");
+    });
     await page.reload();
-    await page.getByRole("button", { name: "Accept" }).click();
+    await page.getByRole("button", { name: "Accept all" }).click();
     await expect(page.getByRole("dialog", { name: /cookie/i })).toBeHidden();
   });
 
