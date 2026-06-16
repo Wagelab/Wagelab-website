@@ -1,5 +1,5 @@
 ---
-title: Income Tax Changes in 2027?
+title: IEthan Livesey - profile of a future millionaire
 description: What could change in 2027
 category: Income Tax
 readTime: 8 min read
