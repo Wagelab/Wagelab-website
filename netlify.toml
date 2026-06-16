@@ -9,19 +9,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# www redirect (non-www → www)
-[[redirects]]
-  from = "https://wagelab.co.uk/*"
-  to = "https://www.wagelab.co.uk/:splat"
-  status = 301
-  force = true
 
-# HTTP → HTTPS (Netlify handles this automatically, but explicit for clarity)
-[[redirects]]
-  from = "http://www.wagelab.co.uk/*"
-  to = "https://www.wagelab.co.uk/:splat"
-  status = 301
-  force = true
 
 # Headers for security
 [[headers]]
