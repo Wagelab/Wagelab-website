@@ -7,10 +7,6 @@ readTime: 10 min read
 date: 2026-06-10
 featured: false
 ---
-INCOME TAX  ·  2026/27
-
-# **Why Your Bonus Was Taxed So Much**
-
 There is no special bonus tax rate. But PAYE does something in a bonus month that makes it look as if there is.
 
 10 min read  ·  Updated June 2026
