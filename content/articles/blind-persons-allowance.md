@@ -51,7 +51,7 @@ This is separate from the Marriage Allowance and can be claimed regardless of wh
 
 ## **The WageLab calculator**
 
-The Blind Person’s Allowance is included as a toggle in the [WageLab calculator](www.wagelab.co.uk/calculator). Switching it on adds £3,250 to your effective Personal Allowance and recalculates your Income Tax accordingly. The calculator correctly maintains the full BPA even when the standard Personal Allowance is being tapered.
+The Blind Person’s Allowance is included as a toggle in the [https://wagelab.co.uk/calculator ](https://wagelab.co.uk/calculator)Switching it on adds £3,250 to your effective Personal Allowance and recalculates your Income Tax accordingly. The calculator correctly maintains the full BPA even when the standard Personal Allowance is being tapered.
 
 **Important:** This article is for informational purposes only and does not constitute financial or tax advice. Based on 2026/27 HMRC rates. Seek independent advice from an FCA-authorised adviser if you are unsure about your entitlement. WageLab is not FCA regulated and does not provide financial advice. © WageLab 2026 · wagelab.co.uk
 
