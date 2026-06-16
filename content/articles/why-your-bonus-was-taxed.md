@@ -9,8 +9,6 @@ featured: false
 ---
 There is no special bonus tax rate. But PAYE does something in a bonus month that makes it look as if there is.
 
-10 min read  ·  Updated June 2026
-
 The bonus arrives in your bank account and the number is wrong. Not slightly wrong. Substantially wrong. You were expecting something in the region of £3,500 from a £5,000 bonus. You got £2,700. Or £2,400. Or something else entirely.
 
 This experience is so common that “why is my bonus taxed so much” is one of the most-searched tax questions in the UK every April and May. And the answer, when it finally arrives, tends to produce a mixture of relief and frustration. Relief that there is a logical explanation. Frustration that nobody told you about it beforehand.
@@ -75,7 +73,7 @@ Not all employers permit bonus sacrifice elections, and the window for making th
 
 The shock on the bonus payslip is almost always either a temporary PAYE timing difference that corrects by April, or the genuine cost of crossing into a higher tax band. It is not a special bonus rate, an error, or an injustice — even when it feels like all three.
 
-**Important:** This article is for informational purposes only and does not constitute financial or tax advice. Based on 2026/27 HMRC rates which are subject to change. Individual circumstances vary. Seek independent advice from a qualified financial adviser before making any financial decisions. When you invest, your capital is at risk. WageLab is not FCA regulated.
+* **Important:** ***This article is for informational purposes only and does not constitute financial or tax advice. Based on 2026/27 HMRC rates which are subject to change. Individual circumstances vary. Seek independent advice from a qualified financial adviser before making any financial decisions. When you invest, your capital is at risk. WageLab is not FCA regulated.***
 
 © WageLab 2026  ·  wagelab.co.uk
 
